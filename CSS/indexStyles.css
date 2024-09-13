@@ -1,57 +1,92 @@
+/* General body styling, but no flexbox here */
 body {
   background-color: #141414;
   color: white;
-  font-family: "Fira Code", monospace;
-  font-optical-sizing: auto;
-  font-weight: 400;
-}
-
-h1 {
-  margin: 0;
-  font-size: 3vw;
-  line-height: 1.2;
-}
-
-/* -----------------TOP LOGO TEXT THING ------------------*/
-
-.header-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   margin: 0;
   padding: 0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.fira-code-light {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* ----------------- TOP SMALL LOGO IN THE HEADER ------------------ */
+.header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
 }
 
 .header-logo img {
   width: auto;
   height: 30px;
-
-  margin-top: 15px;
 }
 
-/* ----------------- AFX LOGO ON RIGHT ------------------*/
+/* ----------------- MAIN CONTENT (TEXT + BIG LOGO) ------------------ */
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+
+  gap: 80px;
+}
+
+/* ----------------- TEXT ON LEFT ------------------ */
+
+.textBIGcontainer h1 {
+  margin: 0;
+  /* font-size: 3vw; */
+  line-height: 1.2;
+
+  font-family: "Fira Code", monospace;
+  font-weight: 380;
+}
+
+.line1 {
+  font-size: 3vw;
+}
+
+.line2 {
+  text-indent: 14vw; /* Moves "VISUAL" to the right */
+  font-size: 3vw;
+}
+
+.line3 {
+  font-size: 3vw;
+  text-indent: 3.5vw;
+}
+
+.line4 {
+  font-size: 1.2vw;
+  text-indent: 20vw;
+}
+
+/* ----------------- AFX LOGO ON RIGHT ------------------ */
+.logoBIGcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .logosvg {
-  width: 40%;
+  width: 30vw;
   height: auto;
 
   /* Inverts black logo to white */
   -webkit-filter: invert(100%);
   filter: invert(100%);
-}
-
-.logoBIGcontainer {
-  display: flex;
-  align-items: center;
-  justify-content: right;
-
-  margin-right: 120px;
-  margin-top: 40px;
-}
-
-/* ----------------- TEXT ON LEFT ------------------*/
-
-.textBIGcontainer {
-  width: auto;
 }
