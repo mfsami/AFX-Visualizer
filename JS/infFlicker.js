@@ -1,4 +1,6 @@
-var delayedFlicker = {
+var count = 1;
+
+var flicker = {
   flickerStop: false,
   /*unicode : '!\'#$%'()*+,-./0123456789:;?@`aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ{[|\}]~^_',*/
   unicode: "!?$ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
@@ -70,6 +72,19 @@ var delayedFlicker = {
   },
 };
 
-delayedFlicker.init(".delayedFlicker", 1, 10, 40);
+function myLoop() {
+  //  create a loop function
+  setTimeout(function () {
+    //  call a 3s setTimeout when the loop is called
+    console.log("hello"); //  your code here
+    flicker.init(".flicker", 1, 10, 40);
+    count++; //  increment the counter
+    if (count < 10) {
+      //  if the counter < 10, call the loop function
+      myLoop(); //  ..  again which will trigger another
+    } //  ..  setTimeout()
+  }, 5000);
+}
 
-setTimeout(delayedFlicker, 3000);
+myLoop();
+// flicker.init(".flicker", 1, 10, 40);

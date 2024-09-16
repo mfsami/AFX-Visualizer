@@ -7,6 +7,16 @@
 
 2. Margins conflict and the afx logo moves when begin starts showing up 
 
+3. Need to add aliases feature. 
+
+Flow of the feature
+
+- Flicker script runs, alias displays, resets
+- Flicker script runs, another alias displays, resets
+- Flicker script runs, another alias displays, resets. etc.
+
+
+
 -->
 
 
@@ -46,11 +56,12 @@
         <h1 class="line1 flicker">/ APHEX TWIN</h1>
         <h1 class="line2 flicker">VISUAL</h1>
         <h1 class="line3 flicker">SHOWCASE</h1>
-        <h1 class="line4 delayedFlicker">Begin ></h1>
+        <h1 class="line4 flicker">Begin ></h1>
 
         <!-- Text Flicker scripts -->
         <script src = JS/flicker.js></script>
-        <script src = JS/delayedFlicker.js></script>
+        <!-- <script src = JS/infFlicker.js></script> -->
+        
       </div>
 
       <!-- Right side: the large logo -->
