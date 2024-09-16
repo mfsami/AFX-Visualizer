@@ -1,12 +1,31 @@
+<!-- CURRENT PROBLEMS WITH FRONT PAGE-->
+
+<!-- 
+
+1. Text glitches good but i want to delay appearnce of "Begin"
+   So initial text will gitch in, wait like a second or two, then begin glitches in, then starts fading in and out
+
+2. Margins conflict and the afx logo moves when begin starts showing up 
+
+-->
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap" rel="stylesheet" />
-
     <link href="CSS/indexStyles.css" rel="stylesheet" />
     <title>AFX</title>
   </head>
@@ -23,10 +42,15 @@
     <div class="content-container">
       <!-- Left side: the large text -->
       <div class="textBIGcontainer">
-        <h1 class="line1">/ APHEX TWIN</h1>
-        <h1 class="line2">VISUAL</h1>
-        <h1 class="line3">SHOWCASE</h1>
-        <h1 class="line4">Begin ></h1>
+    
+        <h1 class="line1 flicker">/ APHEX TWIN</h1>
+        <h1 class="line2 flicker">VISUAL</h1>
+        <h1 class="line3 flicker">SHOWCASE</h1>
+        <h1 class="line4 delayedFlicker">Begin ></h1>
+
+        <!-- Text Flicker scripts -->
+        <script src = JS/flicker.js></script>
+        <script src = JS/delayedFlicker.js></script>
       </div>
 
       <!-- Right side: the large logo -->

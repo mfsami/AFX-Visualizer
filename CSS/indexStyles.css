@@ -6,6 +6,10 @@ body {
   padding: 0;
 }
 
+* {
+  color: white;
+}
+
 html {
   margin: 0;
   padding: 0;
@@ -73,6 +77,9 @@ html {
 .line4 {
   font-size: 1.2vw;
   text-indent: 20vw;
+
+  opacity: 0;
+  animation: flicker 2s ease-in infinite;
 }
 
 /* ----------------- AFX LOGO ON RIGHT ------------------ */
@@ -89,4 +96,22 @@ html {
   /* Inverts black logo to white */
   -webkit-filter: invert(100%);
   filter: invert(100%);
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
