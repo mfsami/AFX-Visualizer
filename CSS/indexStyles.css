@@ -79,7 +79,8 @@ html {
   text-indent: 20vw;
 
   opacity: 0;
-  animation: flicker 2s ease-in infinite;
+  animation: flicker 5s ease-in-out infinite;
+  animation-delay: 3000ms;
 }
 
 /* ----------------- AFX LOGO ON RIGHT ------------------ */
@@ -100,6 +101,18 @@ html {
 
 @keyframes flicker {
   0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+/* @keyframes flicker {
+  0% {
     opacity: 1;
   }
   45% {
@@ -114,4 +127,4 @@ html {
   100% {
     opacity: 1;
   }
-}
+} */

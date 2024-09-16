@@ -1,6 +1,6 @@
 var count = 1;
 
-var flicker = {
+var infFlicker = {
   flickerStop: false,
   /*unicode : '!\'#$%'()*+,-./0123456789:;?@`aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ{[|\}]~^_',*/
   unicode: "!?$ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
@@ -76,14 +76,13 @@ function myLoop() {
   //  create a loop function
   setTimeout(function () {
     //  call a 3s setTimeout when the loop is called
-    console.log("hello"); //  your code here
-    flicker.init(".flicker", 1, 10, 40);
+    infFlicker.init(".infFlicker", 1, 10, 40);
     count++; //  increment the counter
     if (count < 10) {
       //  if the counter < 10, call the loop function
       myLoop(); //  ..  again which will trigger another
     } //  ..  setTimeout()
-  }, 5000);
+  }, 6000);
 }
 
 myLoop();
