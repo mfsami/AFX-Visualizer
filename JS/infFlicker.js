@@ -2,7 +2,7 @@ var count = 1;
 
 var currentIndex = 0;
 
-var afxNames = ["/ RICHARD JAMES", "/ AFX", "/ user18081971", "/ POLYGON WINDOW", "/ BLUE CALX", "/ APHEX TWIN ", "GAK", "BRADLEY STRIDER", "CAUSTIC WINDOW", "POWER-PILL"];
+var afxNames = ["/ RICHARD JAMES", "/ AFX", "/ user18081971", "/ POLYGON WINDOW", "/ BLUE CALX", "/ APHEX TWIN ", "/ GAK", "/ BRADLEY STRIDER", "/ CAUSTIC WINDOW", "/ POWER-PILL"];
 
 var infFlicker = {
   flickerStop: false,
@@ -87,7 +87,8 @@ function myLoop() {
     //  call a 3s setTimeout when the loop is called
     infFlicker.init(".infFlicker", 1, 10, 40);
     count++; //  increment the counter
-    if (count < 10) {
+    console.log(count);
+    if (count < 100) {
       //  if the counter < 10, call the loop function
       myLoop(); //  ..  again which will trigger another
     } //  ..  setTimeout()
