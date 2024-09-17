@@ -52,7 +52,9 @@ html {
 /* ----------------- TEXT ON LEFT ------------------ */
 
 .textBIGcontainer h1 {
+  width: 30vw;
   margin: 0;
+
   /* font-size: 3vw; */
   line-height: 1.2;
 

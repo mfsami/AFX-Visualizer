@@ -1,12 +1,14 @@
 var count = 1;
 
+var currentIndex = 0;
+
+var afxNames = ["/ RICHARD JAMES", "/ AFX", "/ user18081971", "/ POLYGON WINDOW", "/ BLUE CALX", "/ APHEX TWIN ", "GAK", "BRADLEY STRIDER", "CAUSTIC WINDOW", "POWER-PILL"];
+
 var infFlicker = {
   flickerStop: false,
-  /*unicode : '!\'#$%'()*+,-./0123456789:;?@`aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ{[|\}]~^_',*/
+
   unicode: "!?$ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
   getRandomInt: function (min, max) {
-    // console.log(min + ' ' + max);
-    // console.log('weee');
     return Math.floor(Math.random() * (max - min + 1)) + min;
   },
   randomCharacter: function () {
@@ -67,10 +69,17 @@ var infFlicker = {
 
       if (n === storeArr.length) {
         clearInterval(time);
+        updateText(el);
       }
     }, delay);
   },
 };
+
+function updateText(el) {
+  currentIndex = (currentIndex + 1) % afxNames.length;
+  el.innerText = afxNames[currentIndex];
+  infFlicker.init(".infFlicker", 1, 10, 40);
+}
 
 function myLoop() {
   //  create a loop function
@@ -82,7 +91,7 @@ function myLoop() {
       //  if the counter < 10, call the loop function
       myLoop(); //  ..  again which will trigger another
     } //  ..  setTimeout()
-  }, 6000);
+  }, 7000);
 }
 
 myLoop();
