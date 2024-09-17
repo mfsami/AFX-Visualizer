@@ -130,3 +130,14 @@ html {
     opacity: 1;
   }
 } */
+
+button {
+  background-color: #0c0c0c;
+  /* border: none; */
+  cursor: pointer;
+}
+
+#fadeout {
+  opacity: 1;
+  transition: 1s opacity;
+}

@@ -3,19 +3,9 @@
 <!-- 
 
 
-1. Margins conflict and the afx logo moves when begin starts showing up 
+Next steps:
 
-2. Need to add aliases feature. 
-
-Flow of the feature
-
-- Flicker script runs, alias displays, resets
-- Flicker script runs, another alias displays, resets
-- Flicker script runs, another alias displays, resets. etc.
-
-Currently:
-
-Infinite flicker runs, haven't figured out text change
+- When begin is hit all text fades away. Logo comes up
 
 
 -->
@@ -45,16 +35,20 @@ Infinite flicker runs, haven't figured out text change
     <!-- Main content container (text + logo) -->
     <div class="content-container">
       <!-- Left side: the large text -->
-      <div class="textBIGcontainer">
+      <div id = "fadeout" class="textBIGcontainer">
     
         <h1 class="line1 flicker infFlicker">/ APHEX TWIN</h1>
         <h1 class="line2 flicker">VISUAL</h1>
         <h1 class="line3 flicker">SHOWCASE</h1>
-        <h1 class="line4">Begin ></h1>
+        <h1 class="line4" onclick = "fadeAll()" style = cursor:pointer;>Begin ></h1>
+        <!-- <button id="button"><h1 class="line4">Begin ></h1> </button> -->
+
+        
 
         <!-- Text Flicker scripts -->
         <script src = JS/flicker.js></script>
         <script src = JS/infFlicker.js></script>
+        <script src = JS/fadeAll.js></script>
         
       </div>
 
