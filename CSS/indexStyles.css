@@ -4,6 +4,7 @@ body {
   color: white;
   margin: 0;
   padding: 0;
+  font-family: "Fira Code", monospace;
 }
 
 * {
@@ -58,7 +59,6 @@ html {
   /* font-size: 3vw; */
   line-height: 1.2;
 
-  font-family: "Fira Code", monospace;
   font-weight: 380;
 }
 
@@ -102,6 +102,8 @@ html {
 
   transition: 1s ease-out;
   /* transform: translateX(-50%); */
+
+  margin-right: -30px;
 }
 
 @keyframes flicker {
@@ -151,5 +153,39 @@ button {
 
 .logoAnimation {
   animation: logoAnimation 1s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+/* -------------TRACKS-=------------ */
+
+.tracks ul {
+  list-style: none;
+  text-decoration: none;
+  margin-left: -40px;
+  font-size: 20px;
+}
+
+.logoandtracks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@keyframes textAnimations {
+  0% {
+    transform: scale(1) rotate3d(0) translateX(0) translateY(0);
+    opacity: 0;
+  }
+
+  100% {
+    /* transform: scale(1.5) translateY(-50%); */
+    /* transform: scale(2.7) skewX(-25deg) skewY(10deg) rotateX(45deg) rotateY(-20deg) rotateZ(5deg) translateX(-60%) translateY(-3%); */
+    transform: scale(3) rotate3d(130, -80, 30, 60deg) translateX(-150%) translateY(-20%);
+    opacity: 1;
+  }
+}
+
+.textAnimations {
+  animation: textAnimations 1s ease-in-out forwards;
   animation-delay: 1s;
 }
