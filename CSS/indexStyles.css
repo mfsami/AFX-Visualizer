@@ -99,6 +99,9 @@ html {
   /* Inverts black logo to white */
   -webkit-filter: invert(100%);
   filter: invert(100%);
+
+  transition: 1s ease-out;
+  /* transform: translateX(-50%); */
 }
 
 @keyframes flicker {
@@ -113,23 +116,6 @@ html {
     opacity: 0;
   }
 }
-/* @keyframes flicker {
-  0% {
-    opacity: 1;
-  }
-  45% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  95% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-} */
 
 button {
   background-color: #0c0c0c;
@@ -140,4 +126,30 @@ button {
 #fadeout {
   opacity: 1;
   transition: 1s opacity;
+
+  transition: transform 1.5s ease, opacity 1.5s ease;
+  transform-origin: center;
+}
+
+@keyframes logoAnimation {
+  0% {
+    /* transform: scale(1) translateY(0); */
+    /* transform: scale(0) skewX(0) skewY(0) rotateX(0) rotateY(0) rotateZ(0) translateX(0) translateY(0);
+    transform: translateX(0); */
+    transform: scale(1) rotate3d(0) translateX(0) translateY(0);
+
+    opacity: 1;
+  }
+
+  100% {
+    /* transform: scale(1.5) translateY(-50%); */
+    /* transform: scale(2.7) skewX(-25deg) skewY(10deg) rotateX(45deg) rotateY(-20deg) rotateZ(5deg) translateX(-60%) translateY(-3%); */
+    transform: scale(3) rotate3d(130, -80, 0, 60deg) translateX(-60%) translateY(-20%);
+    opacity: 1;
+  }
+}
+
+.logoAnimation {
+  animation: logoAnimation 1s ease-in-out forwards;
+  animation-delay: 1s;
 }

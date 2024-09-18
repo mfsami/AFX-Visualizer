@@ -5,7 +5,9 @@
 
 Next steps:
 
-- When begin is hit all text fades away. Logo comes up
+- Logo comes up to reveal tracklist
+
+  Gonna try without threejs if its boosie fade we use threejs
 
 
 -->
@@ -40,21 +42,28 @@ Next steps:
         <h1 class="line1 flicker infFlicker">/ APHEX TWIN</h1>
         <h1 class="line2 flicker">VISUAL</h1>
         <h1 class="line3 flicker">SHOWCASE</h1>
-        <h1 class="line4" onclick = "fadeAll()" style = cursor:pointer;>Begin ></h1>
-        <!-- <button id="button"><h1 class="line4">Begin ></h1> </button> -->
+
+        <!-- When begin is clicked it will run the fadeAll() function from the JS file -->
+        <h1 class="line4" onclick = "animations()" style = cursor:pointer;>Begin ></h1>
+        
 
         
 
         <!-- Text Flicker scripts -->
         <script src = JS/flicker.js></script>
         <script src = JS/infFlicker.js></script>
-        <script src = JS/fadeAll.js></script>
+        <script src = JS/animations.js></script>
         
       </div>
 
       <!-- Right side: the large logo -->
       <div class="logoBIGcontainer">
-        <img class="logosvg" src="Images/aphex-twin-logo-vector.svg" />
+        <img id = "logo" class="logosvg" src="Images/aphex-twin-logo-vector.svg" />
+        <svg width="200" height="200" viewBox="0 0 200 200">
+          <path>
+            
+          </path>
+        </svg>
       </div>
     </div>
   </body>
