@@ -90,6 +90,7 @@ function myLoop() {
     console.log(count);
     if (count < 100) {
       //  if the counter < 10, call the loop function
+
       myLoop(); //  ..  again which will trigger another
     } //  ..  setTimeout()
   }, 7000);

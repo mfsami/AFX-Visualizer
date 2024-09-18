@@ -104,6 +104,7 @@ html {
   /* transform: translateX(-50%); */
 
   margin-right: -30px;
+  margin-left: -50px;
 }
 
 @keyframes flicker {
@@ -138,7 +139,7 @@ button {
     /* transform: scale(1) translateY(0); */
     /* transform: scale(0) skewX(0) skewY(0) rotateX(0) rotateY(0) rotateZ(0) translateX(0) translateY(0);
     transform: translateX(0); */
-    transform: scale(1) rotate3d(0) translateX(0) translateY(0);
+    transform: scale(1) translateX(0) translateY(0);
 
     opacity: 1;
   }
@@ -146,14 +147,14 @@ button {
   100% {
     /* transform: scale(1.5) translateY(-50%); */
     /* transform: scale(2.7) skewX(-25deg) skewY(10deg) rotateX(45deg) rotateY(-20deg) rotateZ(5deg) translateX(-60%) translateY(-3%); */
-    transform: scale(3) rotate3d(130, -80, 0, 60deg) translateX(-60%) translateY(-20%);
+    transform: scale(2.5) translateX(-45%) translateY(0%);
     opacity: 1;
   }
 }
 
 .logoAnimation {
   animation: logoAnimation 1s ease-in-out forwards;
-  animation-delay: 1s;
+  /* animation-delay: 1s; */
 }
 
 /* -------------TRACKS-=------------ */
@@ -162,7 +163,8 @@ button {
   list-style: none;
   text-decoration: none;
   margin-left: -40px;
-  font-size: 20px;
+  font-size: 15px;
+  line-height: 30px;
 }
 
 .logoandtracks {
@@ -173,19 +175,33 @@ button {
 
 @keyframes textAnimations {
   0% {
-    transform: scale(1) rotate3d(0) translateX(0) translateY(0);
     opacity: 0;
   }
 
   100% {
-    /* transform: scale(1.5) translateY(-50%); */
-    /* transform: scale(2.7) skewX(-25deg) skewY(10deg) rotateX(45deg) rotateY(-20deg) rotateZ(5deg) translateX(-60%) translateY(-3%); */
-    transform: scale(3) rotate3d(130, -80, 30, 60deg) translateX(-150%) translateY(-20%);
     opacity: 1;
   }
 }
 
 .textAnimations {
   animation: textAnimations 1s ease-in-out forwards;
-  animation-delay: 1s;
+  animation-delay: 0.5s;
+}
+
+/* -----ALL TRACKS LOL SO SCUFFED---------*/
+.Fingerbib {
+  text-indent: 0px;
+  font-size: 22px;
+}
+
+.Vordhosbn,
+.Xtal {
+  text-indent: -8px;
+  font-size: 15px;
+}
+
+.four,
+.Acid04 {
+  text-indent: -15px;
+  font-size: 10px;
 }
